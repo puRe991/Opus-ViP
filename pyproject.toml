@@ -1,0 +1,10 @@
+[project]
+name = "opus-vip"
+version = "0.1.0"
+description = "Self-hosted AI clip studio MVP for turning long-form videos into short-form clip candidates."
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

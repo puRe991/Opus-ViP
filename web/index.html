@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Opus-ViP Clip Studio</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Self-hosted Shorts Pipeline</p>
+          <h1>Aus Longform-Content werden verwertbare Clips – ohne Vendor Lock-in.</h1>
+          <p class="lead">Opus‑ViP analysiert Transkripte, bewertet Hook-Potenzial und liefert Schnittfenster, Captions und Exportdaten für TikTok, Reels und Shorts.</p>
+          <div class="metrics">
+            <span><strong>8</strong> Clip-Kandidaten</span>
+            <span><strong>0</strong> externe APIs nötig</span>
+            <span><strong>JSON</strong> Export-ready</span>
+          </div>
+        </div>
+        <form id="analyze-form" class="card">
+          <label>Projektname<input id="name" value="Founder Interview Q3" maxlength="120" /></label>
+          <label>Zieldauer<select id="duration"><option value="30">30s</option><option value="45" selected>45s</option><option value="60">60s</option><option value="90">90s</option></select></label>
+          <label>Transkript<textarea id="transcript" rows="12">00:00-00:08 Why do most AI video tools fail creators?
+00:08-00:18 The mistake is they optimize for novelty instead of repeatable workflow.
+00:18-00:31 Here is the framework we use to turn one podcast into ten strong clips.
+00:31-00:43 Start with the hook, cut every pause, and keep the problem visible.
+00:43-00:55 The best clip is not the loudest moment, it is the clearest transformation.
+00:55-01:05 If you want growth, save this checklist and test it on your next upload.</textarea></label>
+          <button type="submit">Clips analysieren</button>
+          <p id="error" role="alert"></p>
+        </form>
+      </section>
+      <section class="workspace">
+        <div class="section-title"><h2>Ranking</h2><button id="export" disabled>JSON exportieren</button></div>
+        <div id="clips" class="clips empty">Noch keine Analyse gestartet.</div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
